@@ -1,0 +1,70 @@
+GET http://localhost:3000
+
+################################
+GET http://localhost:3000/abc
+
+########
+POST http://localhost:3000/user/token
+
+################################
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "email": "kaio@gmail.com",
+    "password": "123456",
+    "department": "HaNoicomputer",
+    "localtion": "Hue City",
+    "address": "39/06 Pham van mach"
+}
+################################
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "kaio@gmail.com",
+    "password": "123456"
+}
+########
+POST http://localhost:3000/user/searchUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzI4NzAyMjU0MjdiZTQ0M2I3OGI3ZmQiLCJpYXQiOjE2NjQwMTU3NTEsImV4cCI6MTY2NDAxOTM1MX0.gIqobMPhdVKWK9H1vTfl0BqC_yAV4aV_JXu7Dal1hEI
+Content-Type: application/json
+
+
+########
+POST http://localhost:3000/user/updateUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzI4NmMwZGU4YzQzZjEzMzEyNmQ4M2UiLCJpYXQiOjE2NjM1OTM1MDgsImV4cCI6MTY2MzU5NzEwOH0.KmeFZaanTshlNVA6hRAv0WSG4UGv537xqQ4eaG9b_2s
+Content-Type: application/json
+
+{
+    "email": "kaio@gmail.com",
+    "department": "Hue computer",
+    "address": "98 Van Thang"
+}
+
+########
+DELETE http://localhost:3000/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzI4NzAyMjU0MjdiZTQ0M2I3OGI3ZmQiLCJpYXQiOjE2NjM2MDI2NjQsImV4cCI6MTY2MzYwNjI2NH0.CRjNy1KqdOPNX4e3QcgBNnOsCzjUEBVh9PbF-_iNa0s
+Content-Type: application/json
+
+{
+    "id": "63286ec613063abda86390ed"
+}
+########
+POST http://localhost:3000/user/refresh-token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzI4NzAyMjU0MjdiZTQ0M2I3OGI3ZmQiLCJpYXQiOjE2NjM2MDAzNzEsImV4cCI6MTY2MzYwMzk3MX0.g4r7F-SMeqKG4DYrPBZPPuJoLm_Qd23FRFfxTxvbRPk
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzI4NzAyMjU0MjdiZTQ0M2I3OGI3ZmQiLCJpYXQiOjE2NjM2MDAzNzEsImV4cCI6MTY5NTE1Nzk3MX0.GdgfXysl6PdflbFe9tKx_3epVx6yc51IOUh_nRSnGho"
+}
+
+#############
+
+POST http://localhost:3000/user/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzI4NzAyMjU0MjdiZTQ0M2I3OGI3ZmQiLCJpYXQiOjE2NjM2MDAzNzEsImV4cCI6MTY2MzYwMzk3MX0.g4r7F-SMeqKG4DYrPBZPPuJoLm_Qd23FRFfxTxvbRPk
+Content-Type: application/json
+
+{
+    "id": "63286f23814b16acba874cae"
+}
